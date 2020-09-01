@@ -84,6 +84,7 @@ Python 3 + Qt5 (Recommended)
 
     pip3 install pyqt5 lxml # Install qt and lxml by pip
 
+    cd labelImg
     make qt5py3
     python3 labelImg.py
     python3 labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
@@ -175,61 +176,60 @@ Usage
 Steps (PascalVOC)
 ~~~~~~~~~~~~~~~~~
 
-1. Build and launch using the instructions above.
-2. Click 'Change default saved annotation folder' in Menu/File
-3. Click 'Open Dir'
-4. Click 'Create RectBox'
-5. Click and release left mouse to select a region to annotate the rect
-   box
-6. You can use right mouse to drag the rect box to copy or move it
+1.按照上述说明进行构建和启动。
+2.在菜单/文件中单击“更改默认保存的注释文件夹”
+3.点击“打开目录”
+4.点击“创建RectBox”
+5.单击并释放鼠标左键，选择一个区域来标注矩形框
+6.您可以使用鼠标右键拖动矩形框来复制或移动它
 
-The annotation will be saved to the folder you specify.
+注释将保存到您指定的文件夹中。
 
-You can refer to the below hotkeys to speed up your workflow.
+您可以参考以下热键以加快工作流程。
 
 Steps (YOLO)
 ~~~~~~~~~~~~
 
-1. In ``data/predefined_classes.txt`` define the list of classes that will be used for your training.
+1.在“ data / predefined_classes.txt”中，定义将用于训练的的标签列表。
 
-2. Build and launch using the instructions above.
+2.按照上述说明进行构建和启动。
 
-3. Right below "Save" button in the toolbar, click "PascalVOC" button to switch to YOLO format.
+3.在工具栏中的“保存”按钮下方，单击“ PascalVOC”按钮以切换为YOLO格式。
 
-4. You may use Open/OpenDIR to process single or multiple images. When finished with a single image, click save.
+4.您可以使用Open / OpenDIR处理单个或多个图像。 完成单个图像后，单击“保存”。
 
-A txt file of YOLO format will be saved in the same folder as your image with same name. A file named "classes.txt" is saved to that folder too. "classes.txt" defines the list of class names that your YOLO label refers to.
+YOLO格式的txt文件将以与您的图片相同的名称保存在同一文件夹中。 名为“ classes.txt”的文件也被保存到该文件夹。 “ classes.txt”定义了YOLO标签所引用的类名列表。
 
-Note:
+注意：
 
-- Your label list shall not change in the middle of processing a list of images. When you save an image, classes.txt will also get updated, while previous annotations will not be updated.
+-标签列表在处理图像列表的过程中不得更改。 保存图像时，classes.txt也将被更新，而以前的注释将不被更新。
 
-- You shouldn't use "default class" function when saving to YOLO format, it will not be referred.
+-保存为YOLO格式时，请勿使用“default class”功能，否则将不会被引用。
 
-- When saving as YOLO format, "difficult" flag is discarded.
+-当保存为YOLO格式时，“difficult”标志将被丢弃。
 
 Create pre-defined classes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can edit the
+你可以编辑
 `data/predefined\_classes.txt <https://github.com/tzutalin/labelImg/blob/master/data/predefined_classes.txt>`__
-to load pre-defined classes
+去加载预先定义的类别
 
 Hotkeys
 ~~~~~~~
 
 +------------+--------------------------------------------+
-| Ctrl + u   | Load all of the images from a directory    |
+| Ctrl + u   | 从目录加载所有图像                            |
 +------------+--------------------------------------------+
-| Ctrl + r   | Change the default annotation target dir   |
+| Ctrl + r   | 更改默认注释目标目录                          |
 +------------+--------------------------------------------+
 | Ctrl + s   | Save                                       |
 +------------+--------------------------------------------+
-| Ctrl + d   | Copy the current label and rect box        |
+| Ctrl + d   | 复制当前标签和矩形框                           |
 +------------+--------------------------------------------+
-| Space      | Flag the current image as verified         |
+| Space      | 将当前图像标记为已验证                         |
 +------------+--------------------------------------------+
-| w          | Create a rect box                          |
+| w          | 创建一个矩形框                                |
 +------------+--------------------------------------------+
 | d          | Next image                                 |
 +------------+--------------------------------------------+
@@ -241,7 +241,7 @@ Hotkeys
 +------------+--------------------------------------------+
 | Ctrl--     | Zoom out                                   |
 +------------+--------------------------------------------+
-| ↑→↓←       | Keyboard arrows to move selected rect box  |
+| ↑→↓←       | 键盘箭头移动选定的矩形框                        |
 +------------+--------------------------------------------+
 
 **Verify Image:**
