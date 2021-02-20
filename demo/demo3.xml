@@ -1,0 +1,26 @@
+<annotation>
+	<folder>demo</folder>
+	<filename>demo3.jpg</filename>
+	<path>/Users/admin/git/labelImg/demo/demo3.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>799</width>
+		<height>401</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>table</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>187</xmin>
+			<ymin>106</ymin>
+			<xmax>555</xmax>
+			<ymax>246</ymax>
+		</bndbox>
+	</object>
+</annotation>
